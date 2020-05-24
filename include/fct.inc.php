@@ -214,14 +214,6 @@ function ajouterErreur($msg){
 	} 
    $_REQUEST['erreurs'][]=$msg;
 }
-
-function ajouterModification($msg){
-    if (! isset($_REQUEST['message'])){
-      $_REQUEST['message']=array();
-    } 
-   $_REQUEST['message'][]=$msg;
-}
-
 /**
  * Retoune le nombre de lignes du tableau des erreurs 
  

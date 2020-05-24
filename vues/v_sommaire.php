@@ -10,9 +10,8 @@
         <ul id="menuList">
 			<li >
 				  
-                                <?php if ($_SESSION['statut']==1 )  {echo "Comptable :"; } else { echo "Visiteur :"; } ?> <br> 
-                                    <?php echo $_SESSION['prenom']."  ".$_SESSION['nom'] ;
-                                if($_SESSION['statut']==1)
+				<?php echo $_SESSION['statut']." :" ?> <br> <?php echo $_SESSION['prenom']."  ".$_SESSION['nom'] ;
+                                if($_SESSION['statut']=="comptable")
                                 {
                                     echo "<li class='smenu'>
               <a href='index.php?uc=validerFicheFrais&action=selectionnerVisiteur' title='Fiches de frais à valider '>- Fiches de frais à valider </a>

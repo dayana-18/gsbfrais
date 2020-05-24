@@ -1,9 +1,8 @@
 <div class ="message">
-<ul>
+    <center>
 <?php 
-foreach($_REQUEST['message'] as $message)
-    {
-      echo "<li>$message</li>";
-    }
-?>
-</ul></div>
+if($_REQUEST['valider']){
+      echo $message;
+	}
+?></center>
+</div>

@@ -1,11 +1,12 @@
+
 <fieldset><legend>Fiche de frais du mois <?php echo $numMois."-".$numAnnee?> : 
     </legend>
     <!--<div class="encadre">-->
-      <form method="POST"  action="index.php?uc=validerFicheFrais&action=rembourserFiche">
+      <form method="POST"  action="index.php?uc=validerFicheFrais&action=validerRemboursement">
     <p>
         Etat : <?php echo $libEtat?> depuis le <?php echo $dateModif?> <br> Montant validé : <?php echo $montantValide?>
-
-
+              
+                     
     </p>
     <table class="listeLegere">
        <caption>Eléments forfaitisés </caption>
@@ -16,7 +17,7 @@
       $idFrais = $unFrais['idfrais'];
       $libelle = $unFrais['libelle'];
       $quantite = $unFrais['quantite'];
-    ?>
+    ?>  
       <th> <?php echo $libelle?>
       </th>
      <?php
@@ -30,11 +31,11 @@
         $quantite = $unFraisForfait['quantite'];
     ?>
                 <td class="qteForfait"><?php echo $quantite?></td>
-<?php
+     <?php
           }
     ?>
     </table>
-
+    
     </form>
       <br>
     <table class="listeLegere">
@@ -46,7 +47,7 @@
                 <th class="libelle">Libellé</th>
                 <th class='montant'>Montant</th>
              </tr>
-        <?php
+        <?php      
           foreach ( $lesFraisHorsForfait as $unFraisHorsForfait ) 
       {
       $id = $unFraisHorsForfait['id'];
@@ -71,3 +72,17 @@
       </div>
   </div>
   </fieldset>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
